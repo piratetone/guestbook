@@ -1,0 +1,15 @@
+<h1>Hello <%= @name %></h1>
+<%= form_tag action: 'sign_in' do %>
+	<p>Enter Your Name
+	<%= text_field_tag 'visitor_name', @name %></p>
+
+	<%= submit_tag 'Sign In' %>
+<% end %>
+
+<p>Previous Visitors</p>
+<ul>
+<% @entries.each do |entry| %>
+	<li><%= entry.name %></li>
+<% end %>
+</ul>
+</p>
